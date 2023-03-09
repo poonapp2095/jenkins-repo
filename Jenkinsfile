@@ -31,11 +31,11 @@ pipeline {
             
         }
         
-        stage ('Echo Branch') {
+        stage ('copy to tomcat') {
 
             steps {
                 
-                    echo "This is master branch"
+                   cp /root/.jenkins/workspace/jenkins-repo_master/target/jenkins-example-1.0-SNAPSHOT.jar /mnt/servers/apache-tomcat-9.0.73/webapps/
                 }
             
         }
